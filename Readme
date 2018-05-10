@@ -1,0 +1,44 @@
+###############################################################################
+README
+###############################################################################
+
+Files:
+
+1. Convert_image_to_txt.py # converts image to 224x224 rgb txt file
+
+2. CN_cuda.cu # cuda based vggnet
+
+3. Compiling sources
+
+Note: weights and Biases files are not included, very large in size
+
+Download caffemodel pretrained model from here:
+http://www.robots.ox.ac.uk/~vgg/software/very_deep/caffe/VGG_ILSVRC_16_layers.caffemode
+
+You have to extract the weights and biases from model and have to put into data/ dir
+Ref:
+Very Deep Convolutional Networks for Large-Scale Image Recognition
+K. Simonyan, A. Zisserman
+arXiv:1409.1556
+
+But you need to extract weights and biases from above model,
+You can download our caffemode all files and you can use with project directly.
+
+Download Link:
+https://drive.google.com/file/d/1Ud8c_Z4HEu-efjzGTVACeCzjl_FqmiCa/view
+
+extract the above tar inside this directly.
+
+###############################################################################
+Build
+###############################################################################
+sh build.sh
+
+###############################################################################
+Run
+###############################################################################
+python3 Convert_image_to_txt.py data/zebra.png # Optional, for gen. rgb txt file
+./CN 1 data/zebra.png.txt  (1 is the number of image to be tested )
+
+###############################################################################
+
